@@ -1,0 +1,239 @@
+/* Fonte profissional */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+/* Importa a fonte "Roboto" do Google Fonts para ser usada no design da página */
+
+/* Configuração geral do corpo */
+body {
+    font-family: 'Roboto', sans-serif; /* Define a fonte "Roboto" para o texto */
+    background-color: #000; /* Cor de fundo preta */
+    color: #fff; /* Cor do texto branca */
+    display: flex; /* Usa o modelo de layout Flexbox */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Alinha os itens horizontalmente ao centro */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    margin: 0; /* Remove as margens padrão */
+    overflow: hidden; /* Impede a rolagem da página */
+}
+
+/* Contêiner principal */
+.container {
+    width: 450px; /* Define uma largura de 450px para o contêiner */
+    margin: 50px auto; /* Aplica 50px de margem superior e inferior, e centraliza o contêiner */
+    background: rgba(0, 0, 0, 0.8); /* Fundo com cor preta semi-transparente */
+    padding: 30px 20px; /* Padding interno de 30px em cima e embaixo, e 20px nas laterais */
+    border-radius: 15px; /* Bordas arredondadas de 15px */
+    box-shadow: 0px 0px 15px 5px #52057b; /* Sombra com cor roxa */
+}
+
+/* Cabeçalho */
+.header {
+    text-align: center; /* Alinha o conteúdo do cabeçalho ao centro */
+    margin-bottom: 30px; /* Espaçamento abaixo do cabeçalho */
+}
+
+.header .logo {
+    width: 300px; /* Define a largura da logo para 300px */
+    height: auto; /* A altura da logo será ajustada proporcionalmente */
+    margin-bottom: 10px; /* Espaçamento abaixo da logo */
+    display: flex; /* Flexbox para alinhar a logo */
+    flex-direction: column; /* Alinha os itens verticalmente */
+    align-items: center; /* Centraliza os itens */
+    gap: 10px; /* Espaçamento de 10px entre a imagem e o texto */
+}
+
+.header h1 img {
+    width: 50px; /* Define a largura do ícone do cadeado */
+    height: auto; /* A altura será ajustada proporcionalmente */
+}
+
+.header .logo img {
+    max-width: 120px; /* Define o tamanho máximo da logo */
+    border-radius: 15%; /* Bordas arredondadas */
+    padding: 10px; /* Padding interno de 10px */
+    background: linear-gradient(135deg, #1a1a1a, #52057b); /* Fundo com gradiente de cores */
+    box-shadow: 0 0 15px #52057b; /* Sombra em torno da logo */
+}
+
+.header .brand-text {
+    font-size: 22px; /* Tamanho de fonte maior para o texto */
+    color: #888; /* Cor do texto cinza claro */
+    font-style: italic; /* Define o estilo de fonte em itálico */
+    margin-top: 10px; /* Espaçamento superior */
+}
+
+.header h1 {
+    display: flex; /* Flexbox para o título */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Alinha os itens horizontalmente ao centro */
+    font-size: 26px; /* Define o tamanho da fonte do título */
+    font-weight: bold; /* Define a fonte em negrito */
+    gap: 15px; /* Espaçamento entre o ícone e o texto */
+    color: #fff; /* Cor do texto em branco */
+}
+
+.header p {
+    font-size: 14px; /* Tamanho menor para o parágrafo */
+    color: #bbb; /* Cor do texto em cinza claro */
+}
+
+/* Flecha personalizada */
+.arrow-line {
+    width: 100%; /* Largura total */
+    height: 4px; /* Altura de 4px para a linha */
+    background: #6a1b9a; /* Cor de fundo roxa para a linha */
+    position: relative; /* Necessário para posicionamento absoluto da flecha */
+    margin: 10px 0 20px; /* Margens superior, inferior e ao redor da linha */
+}
+
+.arrow-line::after {
+    content: ""; /* Conteúdo vazio para gerar a flecha */
+    position: absolute; /* Posicionamento absoluto dentro da linha */
+    top: -6px; /* Flecha fica 6px acima da linha */
+    right: 0; /* Alinha a flecha à direita */
+    width: 20px; /* Largura da flecha */
+    height: 20px; /* Altura da flecha */
+    border-right: 4px solid #9b59b6; /* Define o lado direito da flecha */
+    border-top: 4px solid #9b59b6; /* Define o lado superior da flecha */
+    transform: rotate(45deg); /* Rotaciona a flecha em 45 graus */
+    animation: arrow-pulse 1.5s infinite ease-in-out; /* Animação para pulsar a flecha */
+}
+
+@keyframes arrow-pulse {
+    0%, 100% {
+        transform: rotate(45deg) translateX(0); /* Posição inicial e final da animação */
+    }
+    50% {
+        transform: rotate(45deg) translateX(-5px); /* Posição intermediária da animação */
+    }
+}
+
+/* Grupo de inputs */
+.input-group {
+    position: relative; /* Necessário para o posicionamento do label */
+    margin: 15px 0; /* Margem superior e inferior para os inputs */
+    text-align: left; /* Alinha os labels à esquerda */
+}
+
+.input-group input {
+    width: 100%; /* Largura total do input */
+    padding: 1rem; /* Padding interno de 1rem */
+    border: 2px solid #555; /* Borda do input */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: transparent; /* Fundo transparente */
+    color: #fff; /* Cor do texto dentro do input */
+    height: 50px; /* Altura do input */
+    outline: none; /* Remove o contorno padrão do input */
+    transition: border-color 0.3s ease; /* Transição suave para a cor da borda */
+}
+
+.input-group input:focus {
+    border-color: #6a0dad; /* Cor da borda quando o input está em foco */
+}
+
+.input-group label {
+    position: absolute; /* Posiciona o label dentro do input */
+    padding: 0 5px; /* Padding interno para ajustar o espaço */
+    top: 50%; /* Alinha o label verticalmente ao centro */
+    left: 1rem; /* Alinha o label à esquerda do input */
+    transform: translateY(-50%); /* Ajuste para centralizar o label */
+    font-size: 14px; /* Tamanho da fonte do label */
+    color: #fff; /* Cor do texto do label */
+    pointer-events: none; /* O label não pode ser clicado */
+    transition: all 0.3s ease; /* Transição suave para o estado de foco */
+    outline: none; /* Remove o contorno */
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: 0px; /* Coloca o label no topo do input ao focar ou preencher */
+    background-color: #111; /* Fundo escuro quando o label sai do centro */
+    font-size: 12px; /* Reduz o tamanho da fonte */
+    padding: 0 5px; /* Ajuste no padding */
+}
+
+/* Checkbox estilizado */
+.checkbox-group {
+    display: flex; /* Flexbox para alinhar os elementos */
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: center; /* Alinha os itens horizontalmente */
+    gap: 10px; /* Espaçamento entre os itens */
+    margin: 15px 0 30px; /* Margem em volta do checkbox */
+}
+
+.checkbox-group input[type="checkbox"] {
+    appearance: none; /* Remove o estilo padrão do checkbox */
+    width: 20px; /* Define a largura do checkbox */
+    height: 20px; /* Define a altura do checkbox */
+    border: 2px solid #6a0dad; /* Borda roxa */
+    background-color: transparent; /* Fundo transparente */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s, border-color 0.3s; /* Transição para as mudanças de cor */
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+    background-color: #6a0dad; /* Cor de fundo roxa quando marcado */
+    border-color: #6a0dad; /* Cor da borda quando marcado */
+}
+
+.checkbox-group label {
+    font-size: 14px; /* Tamanho da fonte do label */
+    color: #fff; /* Cor do texto do label */
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+/* Botões principais */
+.btn-primary {
+    background-color: #6a0dad; /* Cor de fundo roxa */
+    border-color: #6a0dad; /* Cor da borda roxa */
+    color: #fff; /* Cor do texto branca */
+    width: 100%; /* Largura total */
+    padding: 10px; /* Padding interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+.btn-primary:hover {
+    background-color: #4b0082; /* Cor de fundo mais escura no hover */
+}
+
+/* Botão secundário */
+.btn-secondary {
+    background-color: #f08080; /* Cor de fundo vermelha clara */
+    border-color: #f08080; /* Cor da borda vermelha */
+    color: #fff; /* Cor do texto branca */
+    padding: 10px; /* Padding interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+.btn-secondary:hover {
+    background-color: #dc143c; /* Cor de fundo mais escura no hover */
+}
+
+/* Rodapé */
+.footer {
+    text-align: center; /* Alinha o texto ao centro */
+    font-size: 12px; /* Tamanho da fonte menor */
+    color: #888; /* Cor do texto cinza */
+    margin-top: 20px; /* Margem superior */
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Largura de 90% para telas menores */
+    }
+
+    .header h1 {
+        font-size: 20px; /* Reduz o tamanho do título */
+    }
+
+    .input-group input {
+        height: 45px; /* Reduz a altura do input */
+    }
+}
